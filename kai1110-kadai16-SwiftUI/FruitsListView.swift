@@ -3,7 +3,7 @@ import SwiftUI
 
 struct FruitsListView: View {
     @Binding var fruit: FruitData
-    @State var isEditView = false
+    @State private var isEditView = false
     var body: some View {
         HStack {
             Button(action: {
@@ -41,7 +41,7 @@ struct FruitsListView: View {
     }
 }
 
-//Bindingをつかった時にPreviewProviderを使うとうまく動作しない時は、PreView用の中間的なViewを作る。
+//PreView用の中間的なViewを作る。
 private struct Preview: View {
     @State var friut = FruitData(name: "りんご", isCheck: false)
     

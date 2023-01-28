@@ -2,14 +2,13 @@
 import SwiftUI
 
 struct ContentView: View {
-    //プロパティー名は先頭小文字
-    @State var fruits: [FruitData] = [
+    @State private var fruits: [FruitData] = [
         FruitData(name: "リンゴ", isCheck: false),
         FruitData(name: "ミカン", isCheck: true),
         FruitData(name: "パイナップル", isCheck: false),
         FruitData(name: "バナナ", isCheck: true)
     ]
-    @State var isAddView = false
+    @State private var isAddView = false
     
     var body: some View {
         NavigationStack {

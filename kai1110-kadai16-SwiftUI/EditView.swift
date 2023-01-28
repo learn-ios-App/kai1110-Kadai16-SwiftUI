@@ -34,15 +34,9 @@ struct EditView: View {
     }
 }
 
-private struct Preview: View {
-    @State private var sampleText = "りんご"
-    var body: some View {
-        EditView(text: sampleText, edit: { _ in }, cancel: {})
-    }
-}
-
 struct EditView_Previews: PreviewProvider {
+    static private var sampleText = "りんご"
     static var previews: some View {
-        Preview()
+        EditView(text: sampleText, edit: { _ in }, cancel: {})
     }
 }

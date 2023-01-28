@@ -4,7 +4,7 @@ import SwiftUI
 struct AddFruitView: View {
     let save: (String) -> Void
     let cancel: () -> Void
-    @State var newFruitName = ""
+    @State private var newFruitName = ""
     
     var body: some View {
         NavigationStack {
