@@ -11,6 +11,10 @@
 		0B70811A298547DE0018CAF0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B708119298547DE0018CAF0 /* ContentView.swift */; };
 		0B70811C298547E10018CAF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B70811B298547E10018CAF0 /* Assets.xcassets */; };
 		0B70811F298547E10018CAF0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B70811E298547E10018CAF0 /* Preview Assets.xcassets */; };
+		0B708126298548350018CAF0 /* FruitData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B708125298548350018CAF0 /* FruitData.swift */; };
+		0B708128298548850018CAF0 /* AddFruitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B708127298548850018CAF0 /* AddFruitView.swift */; };
+		0B70812A298548AE0018CAF0 /* FruitsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B708129298548AE0018CAF0 /* FruitsListView.swift */; };
+		0B70812C298548CD0018CAF0 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B70812B298548CD0018CAF0 /* EditView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,10 @@
 		0B708119298547DE0018CAF0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0B70811B298547E10018CAF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0B70811E298547E10018CAF0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0B708125298548350018CAF0 /* FruitData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitData.swift; sourceTree = "<group>"; };
+		0B708127298548850018CAF0 /* AddFruitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFruitView.swift; sourceTree = "<group>"; };
+		0B708129298548AE0018CAF0 /* FruitsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitsListView.swift; sourceTree = "<group>"; };
+		0B70812B298548CD0018CAF0 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +61,10 @@
 			children = (
 				0B708117298547DE0018CAF0 /* kai1110_kadai16_SwiftUIApp.swift */,
 				0B708119298547DE0018CAF0 /* ContentView.swift */,
+				0B708127298548850018CAF0 /* AddFruitView.swift */,
+				0B708125298548350018CAF0 /* FruitData.swift */,
+				0B70812B298548CD0018CAF0 /* EditView.swift */,
+				0B708129298548AE0018CAF0 /* FruitsListView.swift */,
 				0B70811B298547E10018CAF0 /* Assets.xcassets */,
 				0B70811D298547E10018CAF0 /* Preview Content */,
 			);
@@ -138,7 +150,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B70811A298547DE0018CAF0 /* ContentView.swift in Sources */,
+				0B70812A298548AE0018CAF0 /* FruitsListView.swift in Sources */,
+				0B70812C298548CD0018CAF0 /* EditView.swift in Sources */,
 				0B708118298547DE0018CAF0 /* kai1110_kadai16_SwiftUIApp.swift in Sources */,
+				0B708126298548350018CAF0 /* FruitData.swift in Sources */,
+				0B708128298548850018CAF0 /* AddFruitView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
