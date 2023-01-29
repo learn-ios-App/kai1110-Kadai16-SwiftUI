@@ -13,7 +13,7 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             List($fruits) { fruit in
-                FruitsListView(fruit: fruit)
+                FruitsListItemView(fruit: fruit)
             }
             .listStyle(InsetListStyle())
             .toolbar {
