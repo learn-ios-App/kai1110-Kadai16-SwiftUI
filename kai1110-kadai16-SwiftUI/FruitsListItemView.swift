@@ -1,7 +1,7 @@
 
 import SwiftUI
 
-struct FruitsListView: View {
+struct FruitsListItemView: View {
     @Binding var fruit: FruitData
     @State private var isEditView = false
     var body: some View {
@@ -46,7 +46,7 @@ private struct Preview: View {
     @State var friut = FruitData(name: "りんご", isCheck: false)
     
     var body: some View {
-        FruitsListView(fruit: $friut)
+        FruitsListItemView(fruit: $friut)
     }
 }
 
