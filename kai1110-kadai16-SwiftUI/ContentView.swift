@@ -12,8 +12,10 @@ struct ContentView: View {
     
     var body: some View {
         NavigationStack {
-            List($fruits) { fruit in
-                ListItemView(fruit: fruit)
+            List {
+                ForEach($fruits) { fruit in
+                    ListItemView(fruit: fruit)
+                }
             }
             .listStyle(InsetListStyle())
             .toolbar {
@@ -37,6 +39,9 @@ struct ContentView: View {
                 }
             )
         }
+    }
+    func deleteFruit(offset: IndexSet) -> Void {
+        fruits.remove(atOffsets: offset)
     }
 }
 

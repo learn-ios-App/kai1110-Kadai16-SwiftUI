@@ -24,6 +24,13 @@ struct ListItemView: View {
             }
             .buttonStyle(BorderlessButtonStyle())
         }
+        .swipeActions(edge: .trailing) {
+            Button(role: .destructive) {
+                //
+            } label: {
+                Image(systemName: "trash.fill")
+            }
+        }
         .sheet(isPresented: $isEditView) {
             EditView(
                 text: fruit.name,
