@@ -3,10 +3,10 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var fruits: [FruitData] = [
-        FruitData(name: "リンゴ", isCheck: false),
-        FruitData(name: "ミカン", isCheck: true),
-        FruitData(name: "パイナップル", isCheck: false),
-        FruitData(name: "バナナ", isCheck: true)
+        FruitData(name: "リンゴ", isCheck: false, deleteCheck: true),
+        FruitData(name: "ミカン", isCheck: true, deleteCheck: true),
+        FruitData(name: "パイナップル", isCheck: false, deleteCheck: true),
+        FruitData(name: "バナナ", isCheck: true, deleteCheck: true)
     ]
     @State private var isAddView = false
     
@@ -14,7 +14,7 @@ struct ContentView: View {
         NavigationStack {
             List {
                 ForEach($fruits) { fruit in
-                    ListItemView(fruit: fruit)
+                    ListItemView(fruit: fruit, delete: delete)
                 }
             }
             .listStyle(InsetListStyle())
@@ -31,7 +31,7 @@ struct ContentView: View {
         .sheet(isPresented: $isAddView) {
             AddFruitView(
                 save: { name in
-                    fruits.append(FruitData(name: name, isCheck: false))
+                    fruits.append(FruitData(name: name, isCheck: false, deleteCheck: true))
                     isAddView = false
                 },
                 cancel: {
@@ -40,8 +40,10 @@ struct ContentView: View {
             )
         }
     }
-    func deleteFruit(offset: IndexSet) -> Void {
-        fruits.remove(atOffsets: offset)
+    //deleteCheckがtrueの以外の要素をフィルタリング
+    func delete() {
+        let necessaryFruit = self.fruits.filter({$0.deleteCheck})
+        self.fruits = necessaryFruit
     }
 }
 

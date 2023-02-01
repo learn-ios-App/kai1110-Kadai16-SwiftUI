@@ -3,6 +3,7 @@ import SwiftUI
 
 struct ListItemView: View {
     @Binding var fruit: FruitData
+    let delete: () -> Void
     @State private var isEditView = false
     var body: some View {
         HStack {
@@ -26,7 +27,9 @@ struct ListItemView: View {
         }
         .swipeActions(edge: .trailing) {
             Button(role: .destructive) {
-                //
+                //deleteCheckの真偽でフィルタリングする
+                fruit.deleteCheck = false
+                delete()
             } label: {
                 Image(systemName: "trash.fill")
             }
@@ -50,10 +53,10 @@ struct ListItemView: View {
 
 //PreView用の中間的なViewを作る。
 private struct Preview: View {
-    @State var friut = FruitData(name: "りんご", isCheck: false)
+    @State var friut = FruitData(name: "りんご", isCheck: false, deleteCheck: true)
     
     var body: some View {
-        ListItemView(fruit: $friut)
+        ListItemView(fruit: $friut, delete: {})
     }
 }
 
